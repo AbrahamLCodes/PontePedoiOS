@@ -17,6 +17,7 @@ class MenuListController: UITableViewController{
         super.viewDidLoad()
         tableView.backgroundColor = darkColor
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        self.tableView.separatorColor = darkColor
         
     }
     
@@ -25,14 +26,45 @@ class MenuListController: UITableViewController{
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = items[indexPath.row]
+        var cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        var cellTxt = items[indexPath.row]
+        cell.textLabel?.text = cellTxt
         cell.textLabel?.textColor = .white
         cell.backgroundColor = darkColor
+        setImageViewtoCell(cell: &cell, txt: &cellTxt)
         return cell
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
+    private func setImageViewtoCell(cell: inout UITableViewCell, txt: inout String){
+        let padding: CGFloat = 10
+
+        switch txt {
+        case "Reglas":
+            cell.imageView?.image = UIImage(named: "beer")
+          break
+            
+        case "Contacto":
+            cell.imageView?.image = UIImage(named: "email")?.resizableImage(withCapInsets: UIEdgeInsets(top: padding, left: padding, bottom: padding, right: padding), resizingMode: .stretch)
+            cell.imageView?.contentMode = .scaleAspectFill
+            
+          break
+            
+        case "Créditos":
+            cell.imageView?.image = UIImage(named: "rating")?.resizableImage(withCapInsets: UIEdgeInsets(top: padding, left: padding, bottom: padding, right: padding), resizingMode: .stretch)
+            cell.imageView?.contentMode = .scaleAspectFill
+          break
+            
+        case "Califícanos":
+            cell.imageView?.image = UIImage(named: "teamwork")?.resizableImage(withCapInsets: UIEdgeInsets(top: padding, left: padding, bottom: padding, right: padding), resizingMode: .stretch)
+            cell.imageView?.contentMode = .scaleAspectFill
+          break
+            
+        default:
+            break
+        }
     }
 }
