@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tas-uh-gPc">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -15,69 +15,100 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tr" translatesAutoresizingMaskIntoConstraints="NO" id="xSb-n6-QU9">
-                                <rect key="frame" x="20" y="54" width="62" height="62"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="xSb-n6-QU9" secondAttribute="height" multiplier="1:1" id="ME0-mV-yeu"/>
-                                </constraints>
-                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="small"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¿Cómo se juega?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p6h-xd-2qS">
-                                <rect key="frame" x="245" y="54" width="159" height="22"/>
-                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="19"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Carta 0 de 52" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GAo-Rh-Aov">
-                                <rect key="frame" x="116" y="613.5" width="182" height="35"/>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="30"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fondochido" translatesAutoresizingMaskIntoConstraints="NO" id="qEJ-Rb-nxv">
-                                <rect key="frame" x="52" y="293" width="310.5" height="310.5"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="qEJ-Rb-nxv" secondAttribute="height" multiplier="1:1" id="xuB-Ei-tT3"/>
-                                </constraints>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Toca la carta para empezar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YXu-xT-yQm">
-                                <rect key="frame" x="28" y="698.5" width="358" height="32"/>
+                                <rect key="frame" x="28" y="708.66666666666663" width="358" height="32"/>
                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="28"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ar-cO-PA9">
+                                <rect key="frame" x="41.333333333333343" y="282.33333333333337" width="331.33333333333326" height="331.33333333333337"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="2ar-cO-PA9" secondAttribute="height" multiplier="1:1" id="lTw-kQ-6kd"/>
+                                </constraints>
+                                <state key="normal" image="fondochido"/>
+                                <connections>
+                                    <action selector="cartaPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Rab-ZI-ns4"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Carta 0 de 52" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GAo-Rh-Aov">
+                                <rect key="frame" x="116" y="623.66666666666663" width="182" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="GAo-Rh-Aov" secondAttribute="height" multiplier="26:5" id="arg-UU-zDM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="30"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="qEJ-Rb-nxv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1Ec-ig-Qy2"/>
                             <constraint firstItem="YXu-xT-yQm" firstAttribute="top" secondItem="GAo-Rh-Aov" secondAttribute="bottom" constant="50" id="4NM-GM-a1a"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="p6h-xd-2qS" secondAttribute="trailing" constant="10" id="79m-Va-MJm"/>
-                            <constraint firstItem="xSb-n6-QU9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="7Fm-mO-f7T"/>
-                            <constraint firstItem="qEJ-Rb-nxv" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="E1n-6k-HBn"/>
-                            <constraint firstItem="xSb-n6-QU9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="ErX-sx-mDh"/>
-                            <constraint firstItem="xSb-n6-QU9" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.15" id="QTV-ob-4bd"/>
+                            <constraint firstItem="GAo-Rh-Aov" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="81T-0j-MnA"/>
+                            <constraint firstItem="2ar-cO-PA9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="J7i-kx-he0"/>
+                            <constraint firstItem="2ar-cO-PA9" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="LAN-zq-JWi"/>
                             <constraint firstItem="YXu-xT-yQm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Tu3-Ye-5MW"/>
-                            <constraint firstItem="GAo-Rh-Aov" firstAttribute="top" secondItem="qEJ-Rb-nxv" secondAttribute="bottom" constant="10" id="X1I-xY-EBt"/>
-                            <constraint firstItem="qEJ-Rb-nxv" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.75" id="Y5v-sP-Z4A"/>
-                            <constraint firstItem="GAo-Rh-Aov" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ydk-0e-ePG"/>
-                            <constraint firstItem="p6h-xd-2qS" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="exT-Vt-nBd"/>
+                            <constraint firstItem="GAo-Rh-Aov" firstAttribute="top" secondItem="2ar-cO-PA9" secondAttribute="bottom" constant="10" id="gtl-rG-lxh"/>
+                            <constraint firstItem="2ar-cO-PA9" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.8" id="pXT-cu-808"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="7Lb-sh-Ut0">
+                        <barButtonItem key="leftBarButtonItem" image="tr" id="AS9-tX-Qpj">
+                            <connections>
+                                <action selector="didSettingsPressed:" destination="BYZ-38-t0r" id="M4A-fd-SzL"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="¿Cómo se juega?" id="iWy-ef-Dwi">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="didComoPressed:" destination="BYZ-38-t0r" id="JKa-69-R9T"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
-                        <outlet property="como" destination="p6h-xd-2qS" id="ls7-zr-c1d"/>
+                        <outlet property="cartaBtn" destination="2ar-cO-PA9" id="D7y-iM-JOp"/>
+                        <outlet property="comoItemTxt" destination="iWy-ef-Dwi" id="7F2-Gv-jw5"/>
                         <outlet property="efecto" destination="YXu-xT-yQm" id="jGq-Bo-Ojj"/>
-                        <outlet property="imagen" destination="qEJ-Rb-nxv" id="uZ5-sM-Go1"/>
                         <outlet property="ncarta" destination="GAo-Rh-Aov" id="Mez-4z-nxT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="33.75" y="77.5"/>
+            <point key="canvasLocation" x="943.47826086956525" y="77.008928571428569"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="5vN-VM-Se5">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="tas-uh-gPc" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="1ZT-jP-toY">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="textShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="We6-qf-wdH"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IAa-Xv-4Mc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="33.333333333333336" y="77.008928571428569"/>
         </scene>
     </scenes>
     <resources>
-        <image name="fondochido" width="230" height="352"/>
-        <image name="tr" width="44.5" height="38"/>
+        <image name="fondochido" width="230.33332824707031" height="352"/>
+        <image name="tr" width="44.666667938232422" height="38.333332061767578"/>
     </resources>
 </document>

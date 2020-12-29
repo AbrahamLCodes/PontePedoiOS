@@ -5,19 +5,21 @@
 //  Created by Abraham Luna on 21/12/20.
 //
 
+import SideMenu
 import UIKit
 
 class ViewController: UIViewController {
     
-    
-    @IBOutlet weak var imagen: UIImageView!
-    @IBOutlet weak var como: UILabel!
+    @IBOutlet weak var comoItemTxt: UIBarButtonItem!
     @IBOutlet weak var ncarta: UILabel!
     @IBOutlet weak var efecto: UILabel!
+    @IBOutlet weak var cartaBtn: UIButton!
+    
+    var menu : SideMenuNavigationController?
     
     let fontNCarta : CGFloat =  0.060
     let fontEfecto : CGFloat = 0.070
-    let fontComo : CGFloat = 0.05
+    let fontComo : CGFloat = 0.06
     
     
     //Method to prepare a Label to ve shown as an Android Toast
@@ -64,7 +66,9 @@ class ViewController: UIViewController {
     func initLabelsFont(){
         ncarta.font = ncarta.font.withSize(self.view.frame.width * fontNCarta)
         efecto.font = efecto.font.withSize(self.view.frame.width * fontEfecto)
-        como.font = como.font.withSize(self.view.frame.width * fontComo)
+        //Faltaria cambiar el font del comoItemTxt
+        //Este seria un ejemplo:
+        //comoBtnTxt.titleLabel?.font = UIFont(name: "¿Cómo se juega?", size: self.view.frame.width * fontComo)
     }
 
     override func viewDidLoad() {
@@ -72,11 +76,29 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         setBackgroundImage()
         initLabelsFont()
+        
+        menu = SideMenuNavigationController(rootViewController: MenuListController())
+        menu?.leftSide = true
+        menu?.setNavigationBarHidden(true, animated: false)
+
+        SideMenuManager.default.leftMenuNavigationController = menu
+        SideMenuManager.default.addPanGestureToPresent(toView: self.view)
+    }
+    
+    @IBAction func cartaPressed(_ sender: UIButton) {
+        
+        self.showToast(message: "Carta Presionada", font: .systemFont(ofSize: 12.0))
+    }
+    
+    @IBAction func didComoPressed(_ sender: UIBarButtonItem) {
+        self.showToast(message: "Como jugar presionado", font: .systemFont(ofSize: 12.0))
+    }
+    
+    @IBAction func didSettingsPressed(_ sender: UIBarButtonItem) {
+        present(menu!, animated: true)
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .darkContent
     }
 }
-
-/*
-Make a Toast
- self.showToast(message: "Este es un Toast de Inicio", font: .systemFont(ofSize: 12.0))
- 
- */

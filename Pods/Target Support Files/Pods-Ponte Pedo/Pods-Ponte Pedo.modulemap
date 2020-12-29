@@ -1,0 +1,6 @@
+framework module Pods_Ponte_Pedo {
+  umbrella header "Pods-Ponte Pedo-umbrella.h"
+
+  export *
+  module * { export * }
+}
