@@ -11,6 +11,7 @@
 		2A79F33FD701764C6FFF71CD /* Pods_Ponte_Pedo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 328A3E6B5016EF7BAD27D163 /* Pods_Ponte_Pedo.framework */; };
 		4967442A04C434BA5193E6E2 /* Pods_Ponte_PedoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01138B74E96F772083B47CFF /* Pods_Ponte_PedoTests.framework */; };
 		FA32328A259AD49A00F79A0E /* ListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA323289259AD49A00F79A0E /* ListController.swift */; };
+		FA964E27259D01E500801ED5 /* RulesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA964E26259D01E500801ED5 /* RulesViewController.swift */; };
 		FADE444B2591B466006769D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADE444A2591B466006769D9 /* AppDelegate.swift */; };
 		FADE444D2591B466006769D9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADE444C2591B466006769D9 /* SceneDelegate.swift */; };
 		FADE444F2591B466006769D9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADE444E2591B466006769D9 /* ViewController.swift */; };
@@ -49,6 +50,7 @@
 		B30055149D5C94BDB41DF3DD /* Pods-Ponte Pedo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ponte Pedo.debug.xcconfig"; path = "Target Support Files/Pods-Ponte Pedo/Pods-Ponte Pedo.debug.xcconfig"; sourceTree = "<group>"; };
 		CD03405A576CAEBF791CA942 /* Pods_Ponte_Pedo_Ponte_PedoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Ponte_Pedo_Ponte_PedoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA323289259AD49A00F79A0E /* ListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListController.swift; sourceTree = "<group>"; };
+		FA964E26259D01E500801ED5 /* RulesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesViewController.swift; sourceTree = "<group>"; };
 		FADE44472591B466006769D9 /* Ponte Pedo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ponte Pedo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FADE444A2591B466006769D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FADE444C2591B466006769D9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -149,6 +151,7 @@
 				FADE44552591B467006769D9 /* LaunchScreen.storyboard */,
 				FADE44582591B467006769D9 /* Info.plist */,
 				FA323289259AD49A00F79A0E /* ListController.swift */,
+				FA964E26259D01E500801ED5 /* RulesViewController.swift */,
 			);
 			path = "Ponte Pedo";
 			sourceTree = "<group>";
@@ -410,6 +413,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA964E27259D01E500801ED5 /* RulesViewController.swift in Sources */,
 				FADE444F2591B466006769D9 /* ViewController.swift in Sources */,
 				FADE444B2591B466006769D9 /* AppDelegate.swift in Sources */,
 				FADE444D2591B466006769D9 /* SceneDelegate.swift in Sources */,

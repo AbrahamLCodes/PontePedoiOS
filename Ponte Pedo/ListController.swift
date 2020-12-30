@@ -8,7 +8,13 @@
 import Foundation
 import UIKit
 
+protocol MenuControllerDelegate {
+    func didSelectMenuItem(named: String)
+}
+
 class MenuListController: UITableViewController{
+    
+    public var delegate: MenuControllerDelegate?
     
     var items = ["Reglas","Contacto","Créditos","Califícanos"]
     let darkColor = UIColor(red: 33/255.0, green: 33/255.0, blue: 33/255.0, alpha: 1)
@@ -35,33 +41,35 @@ class MenuListController: UITableViewController{
         return cell
     }
     
+    
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        let selectedItem = items[indexPath.row]
+        delegate?.didSelectMenuItem(named: selectedItem)
     }
     
     private func setImageViewtoCell(cell: inout UITableViewCell, txt: inout String){
         let padding: CGFloat = 10
-
+        
         switch txt {
         case "Reglas":
             cell.imageView?.image = UIImage(named: "beer")
-          break
+            break
             
         case "Contacto":
             cell.imageView?.image = UIImage(named: "email")?.resizableImage(withCapInsets: UIEdgeInsets(top: padding, left: padding, bottom: padding, right: padding), resizingMode: .stretch)
             cell.imageView?.contentMode = .scaleAspectFill
-            
-          break
+            break
             
         case "Créditos":
             cell.imageView?.image = UIImage(named: "rating")?.resizableImage(withCapInsets: UIEdgeInsets(top: padding, left: padding, bottom: padding, right: padding), resizingMode: .stretch)
             cell.imageView?.contentMode = .scaleAspectFill
-          break
+            break
             
         case "Califícanos":
             cell.imageView?.image = UIImage(named: "teamwork")?.resizableImage(withCapInsets: UIEdgeInsets(top: padding, left: padding, bottom: padding, right: padding), resizingMode: .stretch)
             cell.imageView?.contentMode = .scaleAspectFill
-          break
+            break
             
         default:
             break
